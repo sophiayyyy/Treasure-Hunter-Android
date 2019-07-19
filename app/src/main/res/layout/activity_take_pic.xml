@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".TakePicActivity">
+
+    <SurfaceView
+        android:id="@+id/surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    <!--500height -->
+
+    <!--<ToggleButton-->
+        <!--android:id="@+id/toggle"-->
+        <!--style="@style/ToggleButton"-->
+        <!--android:layout_width="36dp"-->
+        <!--android:layout_height="36dp"-->
+        <!--android:layout_above="@id/camera_navigation"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_marginRight="@dimen/margin_space"-->
+        <!--android:layout_marginBottom="@dimen/general_space"-->
+        <!--android:background="@drawable/btn_camera"-->
+        <!--android:checked="true"-->
+        <!--android:textOff=""-->
+        <!--android:textOn="" />-->
+
+    <ToggleButton
+        android:id="@+id/flash_light"
+        style="@style/ToggleButton"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_above="@id/camera_navigation"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/margin_space"
+        android:layout_marginBottom="@dimen/general_space"
+        android:background="@drawable/btn_flash"
+        android:checked="true"
+        android:textOn=""
+        android:textOff="" />
+
+    <ImageButton
+        android:id="@+id/start_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_radio_button_checked_black_24dp"
+        android:layout_above="@id/camera_navigation"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:id="@+id/round_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_above="@id/camera_navigation"
+        android:layout_marginLeft="@dimen/margin_space"
+        android:layout_marginBottom="@dimen/general_space"
+        android:background="@drawable/ic_photo_library_black_24dp" />
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/camera_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navigation"
+        android:background="@color/white"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black">
+    </android.support.design.widget.BottomNavigationView>
+</RelativeLayout>

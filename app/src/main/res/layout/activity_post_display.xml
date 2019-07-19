@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login">
+
+<ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_above="@id/post_navigation">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/historyImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/btn_padding_space"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/historytags"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/historyImageView"
+            android:layout_alignStart="@+id/history_BStxt"
+            android:layout_marginTop="@dimen/general_space"
+            android:textColor="@color/login_form_details"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/history_BStxt"
+            style="@android:style/Widget.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/historytags"
+            android:padding="@dimen/btn_padding_space"
+            android:layout_alignStart="@id/historybestOptionLV"
+            android:layout_marginTop="@dimen/general_space"
+            android:background="@drawable/continuebutton"
+            android:clickable="false"
+            android:text="@string/selection"
+            android:textStyle="bold"
+            android:textColor="@color/login_form_details" />
+
+        <ListView
+            android:id="@+id/historybestOptionLV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/history_BStxt"
+            android:layout_margin="@dimen/general_space" />
+
+
+
+    </RelativeLayout>
+
+</ScrollView>
+    <android.support.design.widget.BottomNavigationView
+    android:id="@+id/post_navigation"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    app:menu="@menu/bottom_navigation"
+    android:background="@color/white"
+    app:itemIconTint="@color/black"
+    app:itemTextColor="@color/black">
+</android.support.design.widget.BottomNavigationView>
+</RelativeLayout>

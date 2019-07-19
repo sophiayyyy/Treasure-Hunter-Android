@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_login">
+    <LinearLayout
+        android:id="@+id/history_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_history_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_arrow_back_white_24dp"
+            android:background="@color/transparent"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/txt_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/btn_padding_space"
+            android:layout_weight="10"
+            android:text="@string/history"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="25sp"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/history_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/history_delete"
+        android:layout_below="@id/history_linearlayout" />
+
+    <TextView
+        android:id="@+id/history_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/history_navigation"
+        android:text="@string/delete_hint"
+        android:textSize="15sp"
+        android:textColor="@color/login_form_details"
+        android:gravity="center"/>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/history_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navigation"
+        android:background="@color/white"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black">
+    </android.support.design.widget.BottomNavigationView>
+
+</RelativeLayout>

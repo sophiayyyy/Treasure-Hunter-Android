@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fadeScrollbars="false"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/general_space"
+        android:background="@drawable/bg_login">
+
+        <ImageView
+            android:id="@+id/historyImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/btn_padding_space"
+            android:scaleType="fitXY" />
+
+        <EditText
+            android:id="@+id/tagInput"
+            style="@style/tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/historyImageView"
+            android:layout_alignStart="@+id/SOtxt"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:cursorVisible="false"
+            android:enabled="false"
+            android:focusableInTouchMode="false"
+            android:maxEms="13"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/postBtn"
+            android:layout_below="@id/historybestOptionLV"
+            android:layout_margin="@dimen/general_space"
+            android:layout_centerHorizontal="true"
+            style="@style/TopButton"
+            android:text="@string/post"
+            android:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/shareBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@id/SOtxt"
+            android:layout_marginEnd="@dimen/general_space"
+            android:background="@drawable/ic_share_black_24dp"
+            android:visibility="visible" />
+
+
+        <ProgressBar
+            android:id="@+id/pb_loading_indicator"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_below="@+id/SOtxt"
+            android:layout_margin="@dimen/general_space"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/editBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/historyImageView"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@id/tagInput"
+            android:layout_margin="@dimen/btn_padding_space"
+            android:background="@drawable/ic_edit_white_24dp"
+            android:padding="@dimen/btn_padding_space" />
+
+        <TextView
+            android:id="@+id/history_BStxt"
+            style="@android:style/Widget.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tagInput"
+            android:padding="@dimen/btn_padding_space"
+            android:layout_marginTop="@dimen/general_space"
+            android:layout_alignStart="@id/historybestOptionLV"
+            android:background="@drawable/buttonlike_txt"
+            android:clickable="false"
+            android:text="@string/choice"
+            android:textStyle="bold"
+            android:textColor="@color/login_form_details"
+            android:visibility="visible" />
+
+        <ListView
+            android:id="@+id/historybestOptionLV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/history_BStxt"
+            android:layout_marginStart="@dimen/general_space"
+            android:layout_marginTop="@dimen/general_space"
+            android:layout_marginEnd="@dimen/general_space"
+            android:layout_marginBottom="@dimen/general_space"
+            android:visibility="gone"
+            tools:visibility="gone" />
+
+        <TextView
+            android:id="@+id/SOtxt"
+            style="@android:style/Widget.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/postBtn"
+            android:padding="@dimen/btn_padding_space"
+            android:layout_marginTop="@dimen/general_space"
+            android:layout_marginStart="@dimen/general_space"
+            android:background="@drawable/continuebutton"
+            android:clickable="false"
+            android:text="@string/options"
+            android:textStyle="bold"
+            android:textColor="@color/login_form_details" />
+
+        <ListView
+            android:id="@+id/itemListView"
+            android:layout_width="wrap_content"
+            android:layout_height="270dp"
+            android:layout_below="@+id/SOtxt"
+            android:layout_marginStart="@dimen/general_space"
+            android:layout_marginTop="@dimen/general_space"
+            android:layout_marginEnd="@dimen/general_space"
+            android:layout_marginBottom="@dimen/general_space"
+            android:fadeScrollbars="false"
+            android:nestedScrollingEnabled="true"
+            tools:visibility="gone" />
+
+        <Button
+            android:id="@+id/loadmoreBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/itemListView"
+            android:layout_alignEnd="@+id/itemListView"
+            android:layout_marginTop="@dimen/btn_padding_space"
+            android:background="@drawable/loadmorebutton"
+            android:text="@string/load"
+            android:textAllCaps="false"
+            android:textColor="@color/login_form_details"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/selectBestBtn"
+            style="@style/TopButton"
+            android:layout_width = "200dp"
+            android:textColor = "@color/white"
+            android:layout_below="@+id/loadmoreBtn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/general_space"
+            android:layout_marginBottom="@dimen/general_space"
+            android:text="@string/select" />
+
+        <ImageButton
+            android:id="@+id/fetchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_search_black_24dp"
+            android:layout_below="@id/postBtn"
+            android:layout_toLeftOf="@id/shareBtn"
+            android:layout_marginEnd="@dimen/general_space"
+            android:layout_alignTop="@id/SOtxt"
+            tools:visibility="visible" />
+        <TextView
+            android:id="@+id/noResultTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/SOtxt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/btn_bottom"
+            android:layout_marginBottom="@dimen/btn_bottom"
+            android:text="@string/no_result"
+            android:textColor="@color/login_form_details"
+            android:visibility="gone"
+            tools:visibility="visible" />
+    </RelativeLayout>
+</ScrollView>

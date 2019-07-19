@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_columnWeight="1"
+    android:layout_rowWeight="1"
+    android:layout_below="@id/history_linearlayout"
+    app:cardElevation="6dp"
+    app:cardCornerRadius="12dp"
+    android:layout_margin="@dimen/general_space">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_history"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:src="@color/light_grey"/>
+
+        <TextView
+            android:id="@+id/txt_history_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/btn_padding_space"
+            android:text="#tag"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            app:layout_constraintTop_toBottomOf="@id/iv_history"/>
+
+
+            <!--<ImageView-->
+                <!--android:id="@+id/iv_history_like"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="@dimen/btn_padding_space"-->
+                <!--android:background="@drawable/ic_favorite_border_black_24dp"-->
+                <!--app:layout_constraintStart_toStartOf="@id/txt_history_tag"-->
+                <!--app:layout_constraintTop_toBottomOf="@id/txt_history_tag"/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/txt_history_like_number"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:padding="@dimen/btn_padding_space"-->
+                <!--android:text="20"-->
+                <!--android:textSize="16sp"-->
+                <!--app:layout_constraintStart_toEndOf="@id/iv_history_like"-->
+                <!--app:layout_constraintTop_toBottomOf="@id/txt_history_tag"/>-->
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <!--delete-->
+    <!--<LinearLayout-->
+    <!--android:id="@+id/delete_favorites"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="@color/colorAccent"-->
+    <!--android:gravity="center">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_delete_fovorites"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/delete"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="16sp"-->
+    <!--android:textStyle="bold"-->
+    <!--android:layout_margin="@dimen/btn_padding_space" />-->
+    <!--</LinearLayout>-->
+
+</android.support.v7.widget.CardView>
